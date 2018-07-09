@@ -1,0 +1,274 @@
+body{
+	height: 100vh;
+}
+
+li{
+	list-style: none;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.display-1{
+	font-size: 30px;
+}
+
+.f-black{
+	color: black;
+}
+
+.f-gray{
+	color: #333;
+}
+
+.bg-quran{
+	background-image: url('../images/bg-quran.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.close-btn{
+	font-size: 35px;
+	color: #449d44;
+	opacity: 0.7;
+}
+
+.clearfix{
+	clear: both;
+}
+
+/*-------------NAVBAR----------*/
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.mynavbar{
+	/*background-color: #eeeeee2f;*/
+	margin-top: 10px;
+	border-color: transparent;
+}
+
+.mynavbar .navbar-toggle {
+    border-color: #5555554f;
+}
+
+.mynavbar .navbar-brand{
+	color: #333;
+}
+
+.mynavbar .navbar-collapse, .navbar-inverse .navbar-form {
+	border-color: #5555554f;
+}
+
+.mynavbar .navbar-nav>li {
+    margin-left: 10px;
+}
+
+.mynavbar .navbar-nav>li>a {
+    color: #9d9d9d;
+    border-radius: 5px;
+}
+
+.mynavbar .navbar-nav>li>a:hover {
+    background-color: #0000004f;
+}
+
+.mynavbar .navbar-nav>.open>a, .mynavbar .navbar-nav>.open>a:focus, .mynavbar .navbar-nav>.open>a:hover {
+    background-color: #0808087f;
+}
+
+.mynavbar .navbar-nav>li>a {
+    color: #0000008f;
+}
+
+.mynavbar .navbar-nav>.active>a, .mynavbar .navbar-nav>.active>a:focus, .mynavbar .navbar-nav>.active>a:hover {
+	color: #fff;
+    background-color: #0808084f;
+    border-radius: 5px;
+}
+
+.btn-signup, .btn-login{
+	margin-right: 15px;
+}
+
+.dropdown-menu>li>a {
+	color: #fff;
+}
+
+.dropdown-menu{
+	background-color: #555;
+}
+
+
+.open>.dropdown-menu {
+	/*perspective: 1000px;*/
+	transform-origin: left top;
+    display: block;
+    animation-name: anim_trans;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes anim_trans{
+	0%{
+		opacity: 0;
+		transform: rotate(30deg) translateY(30px);
+	}
+
+	100%{
+		opacity: 1;
+		transform: rotate(0deg) translateY(0px);
+	}
+}
+
+@media (max-width: 767px){
+	.navbar-nav .open .dropdown-menu {
+		background-color: #777;
+	}
+	.open>.dropdown-menu {
+		animation: none;
+	}
+}
+
+.icon-user{
+	max-height: 50px;
+}
+
+.control-label{
+	font-size: 18px;
+}
+
+/*----------Halaman UTAMA----------*/
+.display-4{
+	font-size: 60px;
+}
+
+.welcome{
+	height: 400px;
+	opacity: 0;
+	padding: 70px 40px;
+}
+
+.thecontent1 a{
+	opacity: 0;
+}
+
+.content1 .thecontent1 a:nth-child(1) {
+	animation: comein 700ms ease-in-out forwards 1000ms;
+}
+
+.content1 .thecontent1 a:nth-child(2) {
+	animation: comein2 700ms ease-in-out forwards 1700ms;
+}
+
+.btn-outline-danger{
+	color: #d9534f;
+    border-color: #d9534f;
+    transition: background-color 300ms; 
+}
+
+.btn-outline-danger:hover{
+	color: #fff;
+    background-color: #e43d3d;
+}
+
+.btn-outline-danger.active.focus, .btn-outline-danger.active:focus, .btn-outline-danger.active:hover, .btn-outline-danger:active.focus, .btn-outline-danger:active:focus, .btn-outline-danger:active:hover, .open>.dropdown-toggle.btn-outline-danger.focus, .open>.dropdown-toggle.btn-outline-danger:focus, .open>.dropdown-toggle.btn-outline-danger:hover {
+    color: #fff;
+    background-color: #ac2925;
+    border-color: #761c19;
+}
+
+@keyframes comein{
+	0%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes comein2{
+	0%{
+		opacity: 0;
+	}
+
+	30%{
+		opacity: 1;
+	}
+
+	70%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+
+/*-------Modal Login---------*/
+.mymodal{
+	position: absolute;
+	/*background-color: #0000004f;*/
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	justify-content: center;
+	/*align-items: center;*/
+}
+
+.back{
+	background-color: #0000004f;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.open{
+	display: flex;
+}
+
+.form-login, .form-signup{
+	margin: auto;
+	margin-top: 10%;
+	animation: showmodal 500ms ease-in-out forwards;
+}
+
+/*-----------LOGIN-------------*/
+.form-login{
+	padding: 40px;
+	border-radius: 20px;
+	background-color: #587e56;
+	color: #fff;
+	width: 400px;
+}
+
+@keyframes showmodal{
+	0%{
+		transform: scale(0);
+	}
+
+	50%{
+		transform: scale(1.1);
+	}
+
+	100%{
+		transform: scale(1);
+	}
+}
+
+.icon-user-null{
+	width: 100px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	top: -50px;
+}
